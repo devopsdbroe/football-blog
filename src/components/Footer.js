@@ -5,10 +5,8 @@ const Footer = () => {
 
 	return (
 		<footer>
-			<p>&copy; {currentYear} Touchdown Tales</p>
-			<a href="https://www.flaticon.com/free-icons/video" title="video icons">
-				Video icons created by Freepik - Flaticon
-			</a>
+			<p>&copy; {currentYear} Just Another Football Blog</p>
+			<p>Headlines Courtesy of ESPN.com</p>
 		</footer>
 	);
 };

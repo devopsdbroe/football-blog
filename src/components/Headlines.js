@@ -28,7 +28,7 @@ const Headlines = () => {
 
 	return (
 		<aside>
-			<h2>Latest Headlines (Courtesy of ESPN):</h2>
+			<h2>Latest Headlines:</h2>
 			{headlines.map((headline, index) => (
 				<article key={index}>
 					<h3>
