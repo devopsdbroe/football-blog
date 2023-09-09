@@ -5,7 +5,7 @@ const Footer = () => {
 
 	return (
 		<footer>
-			<p>&copy; {currentYear} Just Another Football Blog</p>
+			<p>&copy; {currentYear} Another Football Blog</p>
 			<p>Headlines Courtesy of ESPN.com</p>
 		</footer>
 	);

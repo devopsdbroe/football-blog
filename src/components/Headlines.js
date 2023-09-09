@@ -42,6 +42,7 @@ const Headlines = () => {
 					</h3>
 				</article>
 			))}
+			<h2>Top Articles</h2>
 		</aside>
 	);
 };

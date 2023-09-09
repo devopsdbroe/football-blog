@@ -47,13 +47,10 @@ const Carousel = () => {
 
 	return (
 		<div className="carousel">
-			<a href="#">
-				<img
-					src={`${process.env.PUBLIC_URL}/${images[currentImageIndex].src}`}
-					alt=""
-				/>
-			</a>
-			<div className="caption">{images[currentImageIndex].caption}</div>
+			<img
+				src={`${process.env.PUBLIC_URL}/${images[currentImageIndex].src}`}
+				alt=""
+			/>
 			<div className="controls">
 				<button onClick={prevImage}>&#10094;</button>
 				<button onClick={() => setIsPlaying(!isPlaying)}>
@@ -61,6 +58,7 @@ const Carousel = () => {
 				</button>
 				<button onClick={nextImage}>&#10095;</button>
 			</div>
+			<div className="caption">{images[currentImageIndex].caption}</div>
 		</div>
 	);
 };
