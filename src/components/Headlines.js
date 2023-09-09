@@ -5,6 +5,7 @@ import axios from "axios";
 const Headlines = () => {
 	const [headlines, setHeadlines] = useState([]);
 	const [loading, setLoading] = useState(true);
+	const [error, setError] = useState(false);
 
 	useEffect(() => {
 		const fetchData = async () => {
@@ -17,6 +18,7 @@ const Headlines = () => {
 				setLoading(false);
 			} catch (error) {
 				console.error("There was a problem fetching data", error);
+				setError("There was a problem fetching the latest headlines");
 				setLoading(false);
 			}
 		};
@@ -24,7 +26,20 @@ const Headlines = () => {
 		fetchData();
 	}, []);
 
-	if (loading) return <p>Loading...</p>;
+	if (loading)
+		return (
+			<aside>
+				<h3>Loading...</h3>
+			</aside>
+		);
+
+	if (error) {
+		return (
+			<aside>
+				<h3>Error: {error}</h3>
+			</aside>
+		);
+	}
 
 	return (
 		<aside>
@@ -42,7 +57,7 @@ const Headlines = () => {
 					</h3>
 				</article>
 			))}
-			<h2>Top Articles</h2>
+			<h2>Top Articles:</h2>
 		</aside>
 	);
 };
