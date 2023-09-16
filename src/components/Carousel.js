@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import "font-awesome/css/font-awesome.min.css";
 
 const images = [
 	{
@@ -52,11 +53,19 @@ const Carousel = () => {
 				alt=""
 			/>
 			<div className="controls">
-				<button onClick={prevImage}>&#10094;</button>
-				<button onClick={() => setIsPlaying(!isPlaying)}>
-					{isPlaying ? "⏸" : "▶"}
+				<button onClick={prevImage}>
+					<i className="fa fa-arrow-left"></i>
 				</button>
-				<button onClick={nextImage}>&#10095;</button>
+				<button onClick={() => setIsPlaying(!isPlaying)}>
+					{isPlaying ? (
+						<i className="fa fa-pause"></i>
+					) : (
+						<i className="fa fa-play"></i>
+					)}
+				</button>
+				<button onClick={nextImage}>
+					<i className="fa fa-arrow-right"></i>
+				</button>
 			</div>
 			<div className="caption">{images[currentImageIndex].caption}</div>
 		</div>
